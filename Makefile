@@ -6,7 +6,7 @@ clean:
 	rm -rf dist
 
 build: clean
-	${rollup} -f cjs -o ./dist/wx.common.js
+	${rollup} -f cjs -e promise-polyfill -o ./dist/wx.common.js
 	${rollup} -f umd -n wx -o ./dist/wx.umd.js
 
 test:

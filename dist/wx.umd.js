@@ -766,7 +766,9 @@
 
   var promisify = function promisify(obj, method) {
     var origin = obj[method].bind(obj);
-    obj[method] = function (_ref) {
+    obj[method] = function () {
+      var _ref = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+
       var _success = _ref.success;
       var _fail = _ref.fail;
       var otherArgs = babelHelpers.objectWithoutProperties(_ref, ['success', 'fail']);
@@ -775,11 +777,11 @@
         wx.ready(function () {
           origin(babelHelpers.extends({}, otherArgs, {
             success: function success() {
-              _success.apply(undefined, arguments);
+              if (_success) _success.apply(undefined, arguments);
               resolve.apply(undefined, arguments);
             },
             fail: function fail() {
-              _fail.apply(undefined, arguments);
+              if (_fail) _fail.apply(undefined, arguments);
               reject.apply(undefined, arguments);
             }
           }));
