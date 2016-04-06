@@ -1,0 +1,28 @@
+{
+  "name": "wx-promise",
+  "description": "just make official jssdk return a promise",
+  "main": "./dis/wx.umd.js",
+  "authors": [
+    "xinchaobeta <xinchaobeta@hotmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "wx",
+    "promise"
+  ],
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals",
+    "node"
+  ],
+  "homepage": "https://github.com/xinchaobeta/wx-promise",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src",
+    "build",
+    "test"
+  ]
+}
