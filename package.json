@@ -1,6 +1,6 @@
 {
   "name": "wx-promise",
-  "version": "1.0.0-0",
+  "version": "1.0.0-1",
   "description": "just make official jssdk return a promise",
   "main": "./dist/wx.common.js",
   "scripts": {
